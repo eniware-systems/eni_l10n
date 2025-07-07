@@ -1,0 +1,36 @@
+name: eni_l10n
+description: "Eniware Systems Localization Package"
+version: 2.0.3
+homepage: https://eniware-systems.de
+publish_to: https://gitea.eniware-systems.de/api/packages/eni-flutter/pub
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+  flutter: ">=3.32.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  eni_svc:
+    hosted: https://gitea.eniware-systems.de/api/packages/eni-flutter/pub
+    version: ^2.0.4
+  eni_utils:
+    hosted: https://gitea.eniware-systems.de/api/packages/eni-flutter/pub
+    version: ^2.0.1
+  yaml: ^3.1.2
+  intl: ^0.19.0
+
+dependency_overrides:
+  intl: ^0.19.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.2
+
+flutter:
+  assets:
+    - assets/l10n/

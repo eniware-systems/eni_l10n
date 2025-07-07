@@ -1,0 +1,7 @@
+# melos_managed_dependency_overrides: eni_svc,eni_utils,intl
+dependency_overrides:
+  eni_svc:
+    path: ../eni_svc
+  eni_utils:
+    path: ../eni_utils
+  intl: ^0.19.0

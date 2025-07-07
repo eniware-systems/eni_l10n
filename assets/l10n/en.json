@@ -1,0 +1,6 @@
+{
+  "date-format": {
+    "datetime": "yyyy-MM-dd kk:mm",
+    "date": "yyyy-MM-dd"
+  }
+}
