@@ -13,10 +13,7 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
-
-  eni_svc:
-    hosted: https://github.com/eniware-systems/eni_svc
-    version: ^2.0.4
+    
   eni_svc:
     git:
       url: git@github.com:eniware-systems/eni_svc.git
