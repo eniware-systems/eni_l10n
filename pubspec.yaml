@@ -17,9 +17,14 @@ dependencies:
   eni_svc:
     hosted: https://github.com/eniware-systems/eni_svc
     version: ^2.0.4
+  eni_svc:
+    git:
+      url: git@github.com:eniware-systems/eni_svc.git
+      ref: main
   eni_utils:
-    hosted: https://github.com/eniware-systems/eni_utils
-    version: ^2.0.1
+    git:
+      url: git@github.com:eniware-systems/eni_utils.git
+      ref: main
   yaml: ^3.1.2
   intl: ^0.19.0
 
