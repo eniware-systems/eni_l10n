@@ -109,8 +109,7 @@ class _LocalizationsDelegate
       /// Load and flatten translations for the given locale
       values = (await provider.load(locale)).flatten((k1, k2) => "$k1.$k2");
     } catch (e) {
-      loggerFor("LocalizationDelegate")
-          .e("Failed to load locales for provider ${provider.runtimeType}: $e");
+      loggerFor("LocalizationDelegate").e("Failed to load locales: $e");
       values = {};
     }
 

@@ -1,4 +1,5 @@
 import 'package:eni_svc/collection.dart';
+import 'package:eni_utils/eni_utils.dart';
 import 'package:flutter/widgets.dart';
 
 /// Interface for all localization providers.
@@ -32,7 +33,11 @@ class LocalizationMultiProvider extends LocalizationProvider {
 
     /// Iterate over supported providers and merge their results.
     for (final p in providers.where((p) => p.isSupported(locale))) {
-      results.merge(await p.load(locale));
+      try {
+        results.merge(await p.load(locale));
+      } catch (e) {
+        loggerFor("LocalizationMultiProvider").e("Failed to load locales: $e");
+      }
     }
     return results;
   }
