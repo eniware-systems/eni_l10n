@@ -1,6 +1,5 @@
 import 'package:eni_l10n/src/provider/localization_provider.dart';
 import 'package:eni_svc/eni_svc.dart';
-import 'package:eni_svc/collection.dart';
 import 'package:eni_utils/logger.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -104,8 +103,17 @@ class _LocalizationsDelegate
 
   @override
   Future<LocalizationInterface> load(Locale locale) async {
-    /// Load and flatten translations for the given locale
-    final values = (await provider.load(locale)).flatten((k1, k2) => "$k1.$k2");
+    Map<String, dynamic> values;
+
+    try {
+      /// Load and flatten translations for the given locale
+      values = (await provider.load(locale)).flatten((k1, k2) => "$k1.$k2");
+    } catch (e) {
+      loggerFor("LocalizationDelegate")
+          .e("Failed to load locales for provider ${provider.runtimeType}: $e");
+      values = {};
+    }
+
     final interface = LocalizationInterface._(values);
 
     /// Replace the global singleton instance

@@ -1,0 +1,5 @@
+app:
+  title: "Lokalisierungsbeispiel"
+greeting: "Hallo, {name}!"
+switch:
+  language: "Wechsel zu Englisch"

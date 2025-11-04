@@ -1,6 +1,6 @@
 name: eni_l10n
 description: "Eniware Systems Localization Package"
-version: 2.0.5
+version: 2.0.6
 homepage: https://eniware-systems.de
 publish_to: https://gitea.eniware-systems.de/api/packages/eni-flutter/pub
 
